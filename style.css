@@ -1,0 +1,270 @@
+/* օբշի համար որ սաղ լավ լինի */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* բօդիին գույն տալու համար */
+body {
+    background-color: rgba(247, 247, 247, 0.936);
+}
+/* սարքում ենք ամենավերևի մասի ֆոնը */
+.crotch1 {
+    background-color: rgba(255, 255, 251, 0.942);
+    display: flex;
+    flex-direction: row;
+    height: 63px;
+}
+/* լօգօն ենք սարքում */
+#pictureLogo {
+    width: 50px;
+    height: 50px;
+    margin-left: 23px;
+    margin-top: 7px;
+}
+/* վերևի մասի ֆօնի վրի բառերնա դզվում */
+.text1 {
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 14px;
+    position: relative;
+    left: -42px;
+    margin-left: 28px;
+    letter-spacing: 0.2px;
+    margin-top: 7px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: 2px 2px 3.2px rgb(18, 17, 17);
+}
+/* վերևի մասի ֆոնի փնտրտուքներնա դզվում */
+#search {
+    height: 27px;
+    position: relative;
+    top: 18px;
+    padding: 6px;
+    left: 400px;
+}
+/* վերևի մասի փնտրտուքների նկարնա դզվում */
+#SearchPicture {
+    width: 14px;
+    height: 15px;
+    position: relative;
+    top: 25px;
+    left: 380px;
+}
+/* վերևի մասի ամենաաջ մասի խանութնա */
+#pictureBasket {
+    width: 20px;
+    height: 20px;
+    margin-top: 21px;
+    position: relative;
+    left: 458px;
+}
+/* վերևի մասի ամենաաջ մասի մարդնա */
+#pictureMan {
+    width: 20px;
+    height: 20px;
+    margin-top: 21.5px;
+    margin-left: 481px;
+}
+
+
+
+
+/* գազարագույն գույնի ֆոննա դզվում */
+.orangeText {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 63px;
+    background: #ff9500;
+    background: linear-gradient(0deg, rgba(255, 149, 0, 1) 0%, rgba(255, 181, 77, 1) 50%, rgba(255, 149, 0, 1) 100%);
+}
+/* գազարագույն գույնի ֆոնի գրվածների ընդհանուր գրծնա դզվում */
+.text2 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+    text-shadow: 3px 3px 6px rgb(255, 255, 255);
+}
+/* գազարագույն գույնի ֆոնի առաջին գրվածքնա դզվում */
+#text3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 36px;
+    margin-top: 11.5px;
+}
+/* գազարագույն գույնի ֆոնի երկրորդ գրվածքնա դզվում */
+#text4 {
+    font-size: 18.7px;
+    margin-top: 20px;
+    margin-left: 59%;
+}
+
+
+
+
+/* հիմնական մասնա դզվում արդեն */
+.himnakan {
+    background: #e0e0e0;
+    background: linear-gradient(0deg, rgba(224, 224, 224, 0.81) 0%, rgba(255, 255, 255, 1) 100%);
+    margin-top: 9px;
+    height: 3681px;
+}
+/* սելեքտների ընհանուրնա դզվում */
+.select1 {
+    position: relative;
+    height: 45px;
+    width: 263px;
+    left: 55px;
+    display: flex;
+    flex-direction: row;
+}
+/* առաջին սելեքտնա դզվում */
+#select2 {
+    top: 28px;
+}
+/* երկրորդ սելեքտնա դզվում */
+#select3 {
+    top: 50px;
+}
+
+
+
+
+.himnakaniDzaxMas {
+    width: 350px;
+    height: 650px;
+}
+/* pricinggggg */
+.text18 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    top: 60px;
+    left: 56px;
+}
+.pricing {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 55px;
+    left: 59%;
+    transform: translateX(-50%);
+    width: 150px;
+}
+/* սպիտակ մեծ դիվի տակի գազարագույ բօտօմի վրի գրվածնա դզվում */
+.text11 {
+    display: inline-block;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16.5px;
+}
+
+
+
+
+/* հիմնական նկարների մասի դիվնա դզվում */
+.himnakanNkarneriMas {
+    width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: #ff9500; */
+    gap: 50px;
+    position: relative;
+    left: 355px;
+    top: -762px;
+}
+/* ոբշի նկարների տակի տվյալներով դիվնա դզվում  */
+.nkarneriDiver {
+    width: 289.9px;
+    height: 479px;
+    background-color: rgb(247, 247, 247);
+    display: inline-block;
+    border: 3px solid rgba(100, 100, 100, 0.418);
+    border-radius: 3px;
+    position: relative;
+    top: 50px;
+    left: 3px;
+    display: flex;
+    flex-direction: column;
+}
+/* ոբշի նկարներների դիրքնա դզվում */
+.himnakanPicturNer {
+    width: 285px;
+    height: 280px;
+    background: #ffffff;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(212, 212, 212, 0.98) 100%);
+}
+/* նկարների տակի դիվի վրի տվըալների ոբշի բառերնա դզվում */
+.text14 {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin-left: 25px;
+    line-height: 35px;
+}
+/* նկարների տակի դիվի վրի տվըալների առաջին բառի չափնա դզվում */
+.text15 {
+    font-size: 20px;
+}
+/* նկարների տակի դիվի վրի տվըալների գիննա բառի չափնա դզվում */
+.text17 {
+    font-size: 31px;
+    letter-spacing: 1px;
+}
+.gniKoxiBary {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    position: relative;
+    top: -3px;
+    left: 10px;
+}
+.orange-botton2 {
+    width: 234px;
+    height: 39px;
+    background: #ff9500;
+    background: linear-gradient(0deg, rgba(255, 149, 0, 1) 0%, rgba(255, 181, 77, 1) 50%, rgba(255, 149, 0, 1) 100%);
+    border-radius: 3px;
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: auto;
+    cursor: pointer;
+    text-shadow: -3px 3px 3px rgb(255, 255, 255);
+}
+
+
+
+.crotch1 {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+}
+.orangeText {
+    position: fixed;
+    top: 63px;
+    z-index: 1000;
+}
+body {
+    padding-top: 118px;
+}
+.label1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    position: relative;
+    top: 72px;
+    left: 55px;
+}
+.mobileAnim {
+      width: 93%;
+      height: 452px;
+}

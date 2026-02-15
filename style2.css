@@ -1,0 +1,46 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  width: 99%;
+  height: 95%;
+  margin-top: 18px;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #525252;
+  background: radial-gradient(circle, rgba(82, 82, 82, 0.97) 0%, rgba(68, 68, 68, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileAnim2 {
+  width: 93%;
+  height: 560px;
+}
+
+.radius1 {
+  border-radius: 10px;
+}
