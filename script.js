@@ -68,7 +68,7 @@ maxInput.addEventListener("input", productsMinMax);
 
 
 
-let select2 = document.querySelector("#select2");
+let select3 = document.querySelector("#select3");
 select3.addEventListener("change", (e) => {
   let value = e.target.value;
   if (value === "a-z") {
@@ -108,13 +108,11 @@ function handleAddProduct(id) {
   if (localData.some(elem => elem.id === id)) {
     localData.forEach(elem => {
       if (elem.id === product.id) {
-        elem.count = elem.count ? elem.count + 2 : 1
-        console.log();
-
+        elem.count = elem.count ? elem.count + 1 : 2
       }
     });
   } else {
-    localData.push(product)
+    localData.push({ ...product, count: 1 });
   }
 
 
