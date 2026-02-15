@@ -104,6 +104,20 @@ var swiper = new Swiper(".mySwiper", {
 function handleAddProduct(id) {
   let product = allProducts.find(element => element.id == id)
   let localData = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-  localData.push(product)
-  localStorage.setItem('cart',JSON.stringify(localData))
+
+  if (localData.some(elem => elem.id === id)) {
+    localData.forEach(elem => {
+      if (elem.id === product.id) {
+        elem.count = elem.count ? elem.count + 2 : 1
+        console.log();
+
+      }
+    });
+  } else {
+    localData.push(product)
+  }
+
+
+
+  localStorage.setItem('cart', JSON.stringify(localData))
 }

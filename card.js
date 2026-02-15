@@ -15,10 +15,11 @@ closse.onclick = function () {
     if (AddToCardEj.style.display === "block") {
       AddToCardEj.style.display = "none";
     }
+
+    
     
   let cart = JSON.parse(localStorage.getItem("cart"));
-
-  cartProductsDiv.innerHTML = "";
+  cartProductsDiv.innerHTML = ""
   cart.forEach(product => {
     cartProductsDiv.innerHTML += `
       <div class="nkarneriDiver2">
