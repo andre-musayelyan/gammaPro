@@ -122,11 +122,11 @@ function handleAddProduct(id) {
 }
 
 
-const sound = document.getElementById("clickSound");
+let cklicButtonSound = document.getElementById("#cklicButtonSound");
+let sound = document.getElementById("#clickSound");
 
-document.addEventListener("click", (e) => {
-  if (e.target.closest(".sound-btn")) {
-    sound.currentTime = 0;
-    sound.play();
-  }
+cklicButtonSound.addEventListener("#clickSound", () => {
+  sound.currentTime = 0;
+  sound.volume = 0.4;
+  sound.play();
 });
