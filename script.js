@@ -26,7 +26,8 @@ function himnakanNkarneriMas(products) {
           <span class="gniKoxiBary">${element.category}</span>
         </p>
 
-        <button class="orange-botton2" onclick="handleAddProduct(${element.id})">
+        <button class="orange-botton2" onclick="handleAddProduct(${element.id})" id="cklicButtonSound">
+        <audio src="./picture/sound/mixkit-mouse-click-close-1113.mp3" id="clickSound"></audio>
           <p class="text11">add to card</p>
         </button>
       </div>`;
@@ -112,10 +113,20 @@ function handleAddProduct(id) {
       }
     });
   } else {
-    localData.push({ ...product, count: 1 });
+    localData.push(product)
   }
 
 
 
   localStorage.setItem('cart', JSON.stringify(localData))
 }
+
+
+const sound = document.getElementById("clickSound");
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".sound-btn")) {
+    sound.currentTime = 0;
+    sound.play();
+  }
+});
