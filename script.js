@@ -26,8 +26,7 @@ function himnakanNkarneriMas(products) {
           <span class="gniKoxiBary">${element.category}</span>
         </p>
 
-        <button class="orange-botton2" onclick="handleAddProduct(${element.id})" id="cklicButtonSound">
-        <audio src="./picture/sound/mixkit-mouse-click-close-1113.mp3" id="clickSound"></audio>
+        <button class="orange-botton2" onclick="handleAddProduct(${element.id})">
           <p class="text11">add to card</p>
         </button>
       </div>`;
@@ -120,13 +119,3 @@ function handleAddProduct(id) {
 
   localStorage.setItem('cart', JSON.stringify(localData))
 }
-
-
-let cklicButtonSound = document.getElementById("#cklicButtonSound");
-let sound = document.getElementById("#clickSound");
-
-cklicButtonSound.addEventListener("#clickSound", () => {
-  sound.currentTime = 0;
-  sound.volume = 0.4;
-  sound.play();
-});
