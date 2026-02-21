@@ -116,3 +116,61 @@
     margin-left: 95%;
     cursor: pointer;
 }
+
+
+
+
+.minusPlus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90px;
+    height: 34px;
+
+    border: 2px solid #333;
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #f0ebc2, #ffdd98);
+
+    position: relative;
+    left: 312px;
+    top: -53px;
+
+    user-select: none;
+}
+
+.plusMinusClass {
+    width: 30px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.plusMinusClass:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.plusMinusClass:active {
+    transform: scale(0.9);
+}
+
+#minusId {
+    border-right: 1px solid #333;
+}
+
+.plusMinusClass:last-child {
+    border-left: 1px solid #333;
+}
+.countProduct {
+    font-size: 18px;
+    margin-top: 1px;
+}

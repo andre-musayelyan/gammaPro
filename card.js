@@ -9,16 +9,8 @@ basket.onclick = function () {
   } else {
     AddToCardEj.style.display = "block";
   }
-}
 
-closse.onclick = function () {
-    if (AddToCardEj.style.display === "block") {
-      AddToCardEj.style.display = "none";
-    }
-
-    
-    
-  let cart = JSON.parse(localStorage.getItem("cart"));
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cartProductsDiv.innerHTML = ""
   cart.forEach(product => {
     cartProductsDiv.innerHTML += `
@@ -29,5 +21,22 @@ closse.onclick = function () {
         <p class="text14-2 text17-2">${product.price}$
           <span class="gniKoxiBary2">${product.category}</span>
         </p>
+        <div class="minusPlus">
+            <p class="plusMinusClass" onclick="changeQuantity('-', ${product.id})" id="minusId">-</p>
+            <span class="countProduct">${product.count}</span>
+            <p class="plusMinusClass"  onclick="changeQuantity('+', ${product.id})">+</p>
+        </div>
       </div>`});
+}
+
+closse.onclick = function () {
+  if (AddToCardEj.style.display === "block") {
+    AddToCardEj.style.display = "none";
+  }
+}
+
+
+function changeQuantity(type, id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
 }
