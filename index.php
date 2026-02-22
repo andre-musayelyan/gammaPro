@@ -698,3 +698,123 @@ cart.forEach(product => {
     </div>
   `;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function changeQuantity(type, id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.forEach(elem=> {
+    if(elem.id == id){
+      if(type == '+'){
+        elem.count += 1
+      }else{
+        elem.count -= 1
+      }
+    }
+  })
+
+ localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM էլեմենտներ
+let basket = document.querySelector("#pictureBasket");
+let AddToCardEj = document.querySelector(".AddToCardEj");
+let cartProductsDiv = document.querySelector(".cartProducts");
+let closse = document.querySelector(".Close");
+
+// Basket բացել / փակել
+basket.onclick = function () {
+  AddToCardEj.style.display =
+    AddToCardEj.style.display === "block" ? "none" : "block";
+
+  renderCart();
+};
+
+// Close կոճակ
+closse.onclick = function () {
+  AddToCardEj.style.display = "none";
+};
+
+// Cart render ֆունկցիա
+function renderCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartProductsDiv.innerHTML = "";
+
+  cart.forEach(product => {
+    cartProductsDiv.innerHTML += `
+      <div class="nkarneriDiver2">
+        <img src="${product.image}" alt="picture" class="himnakanPicturNer2">
+
+        <p class="text14-2 text15-2">${product.title}</p>
+        <p class="text14-2 text17-2">${product.price}$
+          <span class="gniKoxiBary2">${product.category}</span>
+        </p>
+
+        <div class="minusPlus">
+          <p class="plusMinusClass" onclick="changeQuantity('-', ${product.id})">-</p>
+          <span class="countProduct">${product.count || 1}</span>
+          <p class="plusMinusClass" onclick="changeQuantity('+', ${product.id})">+</p>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// Plus / Minus ֆունկցիա
+function changeQuantity(type, id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.forEach(elem => {
+    if (elem.id == id) {
+      elem.count = elem.count || 1;
+
+      if (type === '+') {
+        elem.count++;
+      } else {
+        if (elem.count > 1) {
+          elem.count--;
+        }
+      }
+    }
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  // առանց refresh թարմացնում ենք UI-ը
+  renderCart();
+}

@@ -174,3 +174,12 @@
     font-size: 18px;
     margin-top: 1px;
 }
+
+.deleteAllCart {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
