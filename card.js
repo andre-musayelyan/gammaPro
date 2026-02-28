@@ -54,10 +54,10 @@ function changeQuantity(type, id) {
   cart.forEach(elem => {
     if (elem.id == id) {
       if (type == '+') {
-        elem.count += 1
+        elem.count ++
       } else {
         if (elem.count > 1) {
-          elem.count-=1;
+          elem.count--;
         }
       }
     }
