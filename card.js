@@ -47,36 +47,40 @@ closse.onclick = function () {
 
 
 
-
-
 function changeQuantity(type, id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.forEach(elem => {
     if (elem.id == id) {
       if (type == '+') {
-        if (!elem.count){
+        if (!elem.count) {
           elem.count = 2
-        }else{
-          elem.count +=1
+        } else {
+          elem.count += 1
         }
       } else {
         if (elem.count > 1) {
-          elem.count -=1;
+          elem.count -= 1;
         }
       }
     }
 
     console.log(cart);
-    
+
   })
-  
+
 
   localStorage.setItem("cart", JSON.stringify(cart));
   rendercard(cart);
 }
 
 function rendercard(cart) {
-  cartProductsDiv.innerHTML = ""   
+  cartProductsDiv.innerHTML = "";
+
+  if (!cart || cart.length === 0) {
+    cartProductsDiv.innerHTML = "<p>Your cart is empty 🛒</p>";
+    return;
+  }
+
   cart.forEach(product => {
     cartProductsDiv.innerHTML += `
       <div class="nkarneriDiver2">
@@ -100,24 +104,18 @@ function rendercard(cart) {
           <span class="tooltiptext">remove</span>
         </button>
 
-      </div>`});
-  }
+      </div>`;
+  });
+}
 
-  deleteAllCart.onclick = function () {
+deleteAllCart.onclick = function () {
   localStorage.clear();
   cartProductsDiv.innerHTML = "";
 };
 
 function removeFromCart(id) {
-  // վերցնում ենք cart-ը localStorage-ից
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  // հեռացնում ենք տվյալ id-ով ապրանքը
   cart = cart.filter(product => product.id !== id);
-
-  // նորից պահում ենք localStorage-ում
   localStorage.setItem("cart", JSON.stringify(cart));
-
-  // նորից նկարում ենք cart-ը
   rendercard(cart);
 }
