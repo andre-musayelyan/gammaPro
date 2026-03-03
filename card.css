@@ -85,7 +85,8 @@
     display: inline-block;
     background: #ffa56e;
     background: radial-gradient(circle, rgba(255, 165, 110, 1) 0%, rgba(224, 216, 213, 1) 100%);
-    margin-left: 50%;
+    position: relative;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -180,7 +181,7 @@
     display: inline-block;
     position: relative;
     top: 5px;
-    left: -70px;
+    left: 525px;
 }
 
 
@@ -245,4 +246,21 @@ button:hover {
 
 .tooltip:hover .tooltiptext {
  visibility: visible;
+}
+
+.CartEmpty {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    position: relative;
+    margin-top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.deleteAllCart {
+    display: none;
 }
