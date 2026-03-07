@@ -51,27 +51,6 @@ function changeQuantity(type, id) {
 function rendercard(cart) {
   cartProductsDiv.innerHTML = "";
 
-  function rendercard(cart) {
-  cartProductsDiv.innerHTML = "";
-
-  if(!cart || cart.length === 0) {
-    // եթե զամբյուղը դատարկ է՝ չերևա ջնջելու կոճակը
-    deleteAllCart.style.display = "none";
-
-    cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty 🛒</p>";
-    return;
-  } else {
-    // եթե կա ապրանք՝ կոճակը երևա
-    deleteAllCart.style.display = "block";
-  }
-
-  cart.forEach(product => {
-    cartProductsDiv.innerHTML += `
-      ... // մնացած քարտի HTML-ը
-    `;
-  });
-}
-
   if (!cart || cart.length === 0) {
     cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty 🛒</p>";
     return;

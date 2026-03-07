@@ -116,4 +116,5 @@ function handleAddProduct(id) {
   }
 
   localStorage.setItem('cart', JSON.stringify(localData))
+  renderCart()
 }
