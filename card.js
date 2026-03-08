@@ -38,23 +38,27 @@ function changeQuantity(type, id) {
         }
       }
     }
-
-    console.log(cart);
-
   })
-
-
   localStorage.setItem("cart", JSON.stringify(cart));
-  rendercard(cart);
+  rendercard();
 }
 
 function rendercard(cart) {
+
+  if (!cart || cart.length === 0) {
+    cart = JSON.parse(localStorage.getItem('cart'))
+    // return;
+  }
+
   cartProductsDiv.innerHTML = "";
 
   if (!cart || cart.length === 0) {
-    cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty 🛒</p>";
+    cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty</p>";
     return;
   }
+
+  console.log(cart);
+  
 
   cart.forEach(product => {
     cartProductsDiv.innerHTML += `
@@ -92,5 +96,5 @@ function removeFromCart(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart = cart.filter(product => product.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
-  rendercard(cart);
+  rendercard();
 }

@@ -14,6 +14,7 @@ function himnakanNkarneriMas(products) {
   let renderProduct = document.querySelector(".himnakanNkarneriMas");
 
   renderProduct.innerHTML = "";
+  
   // console.log(allProducts);
 
   products.forEach((element) => {
@@ -116,5 +117,5 @@ function handleAddProduct(id) {
   }
 
   localStorage.setItem('cart', JSON.stringify(localData))
-  renderCart()
+  rendercard(localData)
 }
