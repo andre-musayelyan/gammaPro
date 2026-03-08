@@ -259,9 +259,3 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
 }
-
-
-
-.deleteAllCart {
-    display: none;
-}

@@ -4,6 +4,7 @@ let cartProductsDiv = document.querySelector(".cartProducts");
 let closse = document.querySelector(".Close");
 let deleteAllCart = document.querySelector(".deleteAllCart");
 
+
 basket.onclick = function () {
   if (AddToCardEj.style.display === "block") {
     AddToCardEj.style.display = "none";
@@ -11,7 +12,7 @@ basket.onclick = function () {
     AddToCardEj.style.display = "block";
   }
 
- rendercard()
+  rendercard()
 }
 
 closse.onclick = function () {
@@ -45,24 +46,23 @@ function changeQuantity(type, id) {
 
 function rendercard(cart) {
 
-  if (!cart || cart.length === 0) {
-    cart = JSON.parse(localStorage.getItem('cart'))
-    // return;
-  }
+  cart = JSON.parse(localStorage.getItem('cart'))
 
   cartProductsDiv.innerHTML = "";
 
   if (!cart || cart.length === 0) {
-    cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty</p>";
-    return;
-  }
+  cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty</p>";
+  deleteAllCart.style.display = "none";
+  return;
+}
 
-  console.log(cart);
-  
+deleteAllCart.style.display = "block";
+
 
   cart.forEach(product => {
     cartProductsDiv.innerHTML += `
-      <div class="nkarneriDiver2">
+    <div class="allCardDelete">
+    <div class="nkarneriDiver2">
         <img src="${product.image}" alt="picture" class="himnakanPicturNer2">
 
         <p class="text14-2 text15-2">${product.title}</p>
@@ -83,13 +83,14 @@ function rendercard(cart) {
           <span class="tooltiptext">remove</span>
         </button>
 
-      </div>`;
+      </div>
+    </div>`;
   });
 }
 
 deleteAllCart.onclick = function () {
-  localStorage.clear();
-  cartProductsDiv.innerHTML = "";
+  localStorage.removeItem("cart");
+  rendercard();
 };
 
 function removeFromCart(id) {
