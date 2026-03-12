@@ -179,10 +179,9 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    display: inline-block;
-    position: relative;
-    top: 5px;
-    left: 525px;
+    position: absolute;
+    top: 30px;
+    left: 690px;
 }
 
 
@@ -258,4 +257,5 @@ button:hover {
     margin-top: 150px;
     left: 50%;
     transform: translateX(-50%);
+    text-shadow: 0px 0px 10px orange;
 }
