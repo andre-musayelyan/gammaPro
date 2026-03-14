@@ -3,8 +3,6 @@ let AddToCardEj = document.querySelector(".AddToCardEj");
 let cartProductsDiv = document.querySelector(".cartProducts");
 let closse = document.querySelector(".Close");
 let deleteAllCart = document.querySelector(".deleteAllCart");
-
-
 basket.onclick = function () {
   if (AddToCardEj.style.display === "block") {
     AddToCardEj.style.display = "none";
@@ -14,15 +12,11 @@ basket.onclick = function () {
 
   rendercard()
 }
-
 closse.onclick = function () {
   if (AddToCardEj.style.display === "block") {
     AddToCardEj.style.display = "none";
   }
 }
-
-
-
 function changeQuantity(type, id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.forEach(elem => {
