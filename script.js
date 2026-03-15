@@ -119,3 +119,15 @@ function handleAddProduct(id) {
   localStorage.setItem('cart', JSON.stringify(localData))
   rendercard(localData)
 }
+
+let search = document.querySelector("#search")
+
+search.addEventListener("input", function () {
+  let value = search.value.toLowerCase();
+
+  let filtered = allProducts.filter(product =>
+    product.title.includes(value)
+  );
+
+  himnakanNkarneriMas(filtered);
+});

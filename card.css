@@ -8,42 +8,39 @@
     margin-top: -10px;
 }
 .nkarneriDiver2 {
-    background-color: rgb(247, 247, 247);
-    border: 3px solid rgba(100, 100, 100, 0.418);
-    border-radius: 3px;
-    margin-top: 15px;
-    height: 284.5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 .himnakanPicturNer2 {
-    width: 285px;
-    height: 280px;
-    background: #ffffff;
-    background: radial-gradient(circle, rgb(255, 251, 251) 0%, rgba(212, 211, 208, 0.98) 100%);
-    border-radius: 25px;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #f8f8f8;
 }
 /* քարտի ապրանքների ընհանուր բառերնա դզվում */
 .text14-2 {
-    height: 0;
     position: relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
 }
 /* քարտի ապրանքների վերնագիրը */
 .text15-2 {
-    top: -273px;
-    left: 310px;
-    font-size: 40px;
-    width: 72%;
-    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+    width: 40%;
 }
 /* գին */
 .text17-2 {
-    font-size: 31px;
-    letter-spacing: 1px;
-    top: -130px;
-    margin-left: 310px;
-    font-size: 50px;
-    color: rgb(255, 174, 0);
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff9900;
 }
 /* գնի կողի բառը */
 .gniKoxiBary2 {
@@ -57,18 +54,20 @@
 
 /* քարտի էջը */
 .AddToCardEj {
-    width: 80%;
-    background-color: rgb(227, 227, 227);
+    width: 70%;
+    max-width: 900px;
+    background: #f3f3f3;
     position: fixed;
+    top: 90px;
     left: 50%;
-    top: 100px;
     transform: translateX(-50%);
-    z-index: 9999;
-    border-radius: 16px;
+    border-radius: 15px;
     display: none;
-    padding: 15px;
-    height: 500px;
+    padding: 25px;
+    z-index: 9999;
+    max-height: 520px;
     overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 /* քարտի էջի վերնագիրը */
 .CardTitle {
@@ -77,18 +76,18 @@
     font-weight: 600;
     word-spacing: 6px;
     letter-spacing: 0.8px;
-    margin-top: -5px;
+    margin-top: -4px;
 }
 .cardTitleDiv {
-    padding: 10px;
-    border: 4px solid rgb(35, 12, 12);
+    padding: 10px 25px;
     border-radius: 500px;
     display: inline-block;
-    background: #ffa56e;
-    background: radial-gradient(circle, rgba(255, 165, 110, 1) 0%, rgba(224, 216, 213, 1) 100%);
+    background: linear-gradient(45deg, #ff9a3c, #ffcf7d);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: -3px;
+    margin-bottom: 20px;
 }
 
 
@@ -100,23 +99,19 @@
     height: 25px;
     position: relative;
 }
+
 .Close {
-    width: 37.4px;
-    height: 37.4px;
-    left: 350px;
-    top: 9px;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
     cursor: pointer;
+    transition: 0.2s;
 }
-.Close {
-  position: sticky;
-  top: 10px;
-  right: 10px;
-  float: right;
-  z-index: 10000;
+.Close:hover {
+    transform: scale(1.1);
 }
-
-
-
 
 
 
@@ -133,9 +128,9 @@
 
     background: linear-gradient(135deg, #f0ebc2, #ffdd98);
 
-    position: relative;
+    /* position: relative;
     left: 312px;
-    top: -53px;
+    top: -53px; */
 
     user-select: none;
 }
@@ -174,23 +169,21 @@
     font-size: 18px;
     margin-top: 1px;
 }
-
 .deleteAllCart {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+    width: 28px;
     position: absolute;
-    top: 30px;
-    left: 690px;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.deleteAllCart:hover {
+    transform: scale(1.1);
 }
 
 
 
-
-
-
-
-button {
+.tooltip {
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -202,24 +195,23 @@ button {
  transition: all 0.2s linear;
 }
 
-button:hover {
- box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
-  8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
-  17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
-  36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
-  99px 72px 143px rgba(0, 0, 0, 0.08);
+.tooltip:hover svg{
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+
+.tooltip svg{
+    transform: scale(1);
+    transition: 0.2s;
 }
 
 .tooltip {
- position: relative;
- display: inline-block;
- position: relative;
- top: -120px;
- left: 1030px;
- cursor: pointer;
+ background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.tooltip .tooltiptext {
+/* .tooltip .tooltiptext {
  visibility: hidden;
  width: 4em;
  background-color: rgba(0, 0, 0, 0.253);
@@ -231,9 +223,9 @@ button:hover {
  z-index: 1;
  top: 25%;
  left: 110%;
-}
+} */
 
-.tooltip .tooltiptext::after {
+/* .tooltip .tooltiptext::after {
  content: "";
  position: absolute;
  top: 50%;
@@ -242,11 +234,15 @@ button:hover {
  border-width: 5px;
  border-style: solid;
  border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
-}
+} */
 
-.tooltip:hover .tooltiptext {
+/* .tooltip:hover .tooltiptext {
  visibility: visible;
-}
+} */
+
+
+
+
 
 .CartEmpty {
     text-align: center;
@@ -257,5 +253,5 @@ button:hover {
     margin-top: 150px;
     left: 50%;
     transform: translateX(-50%);
-    text-shadow: 0px 0px 10px orange;
+    color: #555555;
 }

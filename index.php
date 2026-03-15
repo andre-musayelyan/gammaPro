@@ -933,3 +933,300 @@ function changeQuantity(type, id) {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   rendercard(cart);
+
+
+
+
+
+
+
+  <?php
+// Ֆայլերի անուններ
+$visitsFile = 'visits.txt';
+$messagesFile = 'messages.txt';
+
+// 1. Հաշվիչ
+if (file_exists($visitsFile)) {
+    $visits = (int)file_get_contents($visitsFile);
+} else {
+    $visits = 0;
+}
+$visits++;
+file_put_contents($visitsFile, $visits);
+
+// 2. Հաղորդագրություններ ավելացնել
+if (isset($_POST['message']) && !empty(trim($_POST['message']))) {
+    $newMessage = htmlspecialchars($_POST['message']); // անվտանգություն
+    $allMessages = file_exists($messagesFile) ? file_get_contents($messagesFile) : '';
+    $allMessages .= date("Y-m-d H:i:s") . " — " . $newMessage . "\n";
+    file_put_contents($messagesFile, $allMessages);
+}
+
+// 3. Կարդում բոլոր հաղորդագրությունները
+$messages = file_exists($messagesFile) ? file($messagesFile, FILE_IGNORE_NEW_LINES) : [];
+?>
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>Շաաատ երկար PHP օրինակ</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        .counter { margin-bottom: 20px; font-size: 24px; }
+        form { margin-bottom: 30px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px 20px; }
+        .messages { background: #fff; padding: 15px; border-radius: 5px; max-width: 500px; }
+        .message { padding: 5px 0; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="counter">
+    Այս էջը այցելվել է <strong><?php echo $visits; ?></strong> անգամ
+</div>
+
+<form method="post">
+    <input type="text" name="message" placeholder="Մտցիր հաղորդագրություն" required>
+    <button type="submit">Ուղարկել</button>
+</form>
+
+<div class="messages">
+    <h3>Հաղորդագրություններ</h3>
+    <?php if (empty($messages)) : ?>
+        <p>Մինչ այս հաղորդագրություններ չկան</p>
+    <?php else : ?>
+        <?php foreach ($messages as $msg) : ?>
+            <div class="message"><?php echo $msg; ?></div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ================= CART WINDOW ================= */
+
+.AddToCardEj{
+    width:70%;
+    max-width:900px;
+    background:#f3f3f3;
+    position:fixed;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:15px;
+    display:none;
+    padding:25px;
+    z-index:9999;
+    max-height:520px;
+    overflow-y:auto;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= TITLE ================= */
+
+.cardTitleDiv{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.CardTitle{
+    font-size:32px;
+    font-weight:600;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(45deg,#ff9a3c,#ffcf7d);
+    display:inline-block;
+    padding:10px 25px;
+    border-radius:40px;
+}
+
+/* ================= CLOSE ================= */
+
+.Close{
+    width:32px;
+    position:absolute;
+    right:20px;
+    top:20px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.Close:hover{
+    transform:scale(1.1);
+}
+
+/* ================= DELETE ALL ================= */
+
+.deleteAllCart{
+    width:28px;
+    position:absolute;
+    left:20px;
+    top:20px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.deleteAllCart:hover{
+    transform:scale(1.1);
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.nkarneriDiver2{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.himnakanPicturNer2{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    border-radius:10px;
+    background:#f8f8f8;
+}
+
+/* ================= PRODUCT TEXT ================= */
+
+.text15-2{
+    font-size:20px;
+    font-weight:600;
+    width:40%;
+}
+
+.text17-2{
+    font-size:26px;
+    font-weight:bold;
+    color:#ff9900;
+}
+
+.gniKoxiBary2{
+    font-size:15px;
+    margin-left:5px;
+    color:#555;
+}
+
+/* ================= PLUS MINUS ================= */
+
+.minusPlus{
+    display:flex;
+    align-items:center;
+    border:2px solid #333;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.plusMinusClass{
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    cursor:pointer;
+    background:#f2f2f2;
+    transition:0.2s;
+}
+
+.plusMinusClass:hover{
+    background:#ddd;
+}
+
+.countProduct{
+    width:40px;
+    text-align:center;
+    font-size:18px;
+}
+
+/* ================= REMOVE BUTTON ================= */
+
+.tooltip{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.tooltip svg{
+    transition:0.2s;
+}
+
+.tooltip:hover svg{
+    transform:scale(1.15);
+}
+
+/* ================= EMPTY CART ================= */
+
+.CartEmpty{
+    text-align:center;
+    font-size:28px;
+    font-weight:600;
+    margin-top:120px;
+    color:#555;
+}

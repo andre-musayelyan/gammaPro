@@ -45,7 +45,7 @@ function rendercard(cart) {
   cartProductsDiv.innerHTML = "";
 
   if (!cart || cart.length === 0) {
-  cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty</p>";
+  cartProductsDiv.innerHTML = "<p class='CartEmpty'>Your cart is empty 🛒</p>";
   deleteAllCart.style.display = "none";
   return;
 }
@@ -60,7 +60,7 @@ deleteAllCart.style.display = "block";
         <img src="${product.image}" alt="picture" class="himnakanPicturNer2">
 
         <p class="text14-2 text15-2">${product.title}</p>
-        <p class="text14-2 text17-2">${product.price}$
+        <p class="text14-2 text17-2">${(product.price * (product.count || 1)).toFixed(2)}$
           <span class="gniKoxiBary2">${product.category}</span>
         </p>
         

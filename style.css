@@ -6,11 +6,11 @@
 }
 /* բօդիին գույն տալու համար */
 body {
-    background-color: rgba(247, 247, 247, 0.936);
+    background-color: rgba(237, 238, 239, 0.936);
 }
 /* սարքում ենք ամենավերևի մասի ֆոնը */
 .crotch1 {
-    background-color: rgba(255, 255, 251, 0.942);
+    background-color: rgba(255, 255, 251, 0.792);
     display: flex;
     flex-direction: row;
     height: 63px;
@@ -109,19 +109,19 @@ body {
 
 /* հիմնական մասնա դզվում արդեն */
 .himnakan {
-    background: #e0e0e0;
-    background: linear-gradient(0deg, rgba(224, 224, 224, 0.81) 0%, rgba(255, 255, 255, 1) 100%);
+    background-color: rgba(237, 238, 239, 0.936);
     margin-top: 9px;
-    height: 3681px;
+    height: 3000px;
 }
 /* սելեքտների ընհանուրնա դզվում */
 .select1 {
     position: relative;
     height: 45px;
     width: 263px;
-    left: 55px;
+    left: 50px;
     display: flex;
     flex-direction: row;
+    border-radius: 8px;
 }
 /* առաջին սելեքտնա դզվում */
 #select2 {
@@ -135,34 +135,36 @@ body {
 
 
 
-.himnakaniDzaxMas {
-    width: 350px;
-    height: 650px;
+.himnakaniDzaxMas { 
+    width: 250px;
+    border-radius: 15px;
+    background: white;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 15px;
+    position: relative;
+    top: 70px;
+    left: 54px;
 }
 /* pricinggggg */
 .text18 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    position: relative;
-    top: 60px;
-    left: 56px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 .pricing {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 55px;
-    left: 59%;
-    transform: translateX(-50%);
     width: 150px;
+    margin-left: 50px;
 }
-/* սպիտակ մեծ դիվի տակի գազարագույ բօտօմի վրի գրվածնա դզվում */
 .text11 {
     display: inline-block;
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16.5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+.label1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 16.5px;
 }
 
 
@@ -173,54 +175,67 @@ body {
     width: 1160px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* background-color: #ff9500; */
+    background-color: rgba(237, 238, 239, 0.936);
     gap: 50px;
     position: relative;
     left: 355px;
-    top: -762px;
+    top: -723px;
 }
 /* ոբշի նկարների տակի տվյալներով դիվնա դզվում  */
 .nkarneriDiver {
     width: 289.9px;
-    height: 479px;
-    background-color: rgb(247, 247, 247);
+    background: white;
     display: inline-block;
-    border: 3px solid rgba(100, 100, 100, 0.418);
-    border-radius: 3px;
+    border-radius: 20px;
     position: relative;
     top: 50px;
     left: 3px;
     display: flex;
     flex-direction: column;
+    padding: 15px;
+    overflow: hidden;
 }
+@keyframes animdiv {
+    from {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transform: translateY(0px);
+    }
+    to {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        transform: translateY(-10px);
+    }
+}
+ .nkarneriDiver {
+  transition: 0.2s ease-in-out;
+}
+
+.nkarneriDiver:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+}
+
 /* ոբշի նկարներների դիրքնա դզվում */
 .himnakanPicturNer {
-    width: 285px;
-    height: 280px;
-    background: #ffffff;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(212, 212, 212, 0.98) 100%);
+    width: 205px;
+    height: 230px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /* նկարների տակի դիվի վրի տվըալների ոբշի բառերնա դզվում */
 .text14 {
-    position: relative;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
-    margin-left: 25px;
-    line-height: 35px;
-}
-/* նկարների տակի դիվի վրի տվըալների առաջին բառի չափնա դզվում */
-.text15 {
-    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* նկարների տակի դիվի վրի տվըալների գիննա բառի չափնա դզվում */
 .text17 {
+    line-height: 60px;
     font-size: 31px;
-    letter-spacing: 1px;
+    color: #ff9500;
 }
 .gniKoxiBary {
     font-weight: 400;
     font-size: 20px;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.2px;
     position: relative;
     top: -3px;
     left: 10px;
@@ -229,25 +244,27 @@ body {
     width: 234px;
     height: 39px;
     background: #ff9500;
-    background: linear-gradient(0deg, rgba(255, 149, 0, 1) 0%, rgba(255, 181, 77, 1) 50%, rgba(255, 149, 0, 1) 100%);
-    border-radius: 3px;
+    border-radius: 10px;
     border: none;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: auto;
+    margin-bottom: 7px;
     cursor: pointer;
-    text-shadow: -3px 3px 3px rgb(255, 255, 255);
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-
-
+.orange-botton2:hover {
+    background: #e68600;
+}
 .crotch1 {
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: white;
     width: 100%;
+    backdrop-filter: blur(5px);
 }
 .orangeText {
     position: fixed;
@@ -256,13 +273,6 @@ body {
 }
 body {
     padding-top: 118px;
-}
-.label1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    position: relative;
-    top: 72px;
-    left: 55px;
 }
 .mobileAnim {
       width: 93%;
