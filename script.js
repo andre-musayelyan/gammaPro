@@ -90,6 +90,7 @@ select3.addEventListener("change", (e) => {
   }
 });
 
+
 var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
