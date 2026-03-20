@@ -1230,3 +1230,49 @@ $messages = file_exists($messagesFile) ? file($messagesFile, FILE_IGNORE_NEW_LIN
     margin-top:120px;
     color:#555;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tooltip .tooltiptext {
+ visibility: hidden;
+ width: 4em;
+ background-color: rgba(0, 0, 0, 0.253);
+ color: #fff;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+ top: 25%;
+ left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+ content: "";
+ position: absolute;
+ top: 50%;
+ right: 100%;
+ margin-top: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+}

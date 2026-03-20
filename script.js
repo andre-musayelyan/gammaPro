@@ -121,12 +121,14 @@ function handleAddProduct(id) {
   rendercard(localData)
 }
 
+
 let search = document.querySelector("#search")
 
-search.addEventListener("input", function () {
-  let value = search.value.toLowerCase();
+search.addEventListener("input", function (e) {
+  let value = e.target.value;
 
-  let filtered = allProducts.filter(product =>
+  let filtered = allProducts.filter(product => 
+    product.category.includes(value) || 
     product.title.includes(value)
   );
 

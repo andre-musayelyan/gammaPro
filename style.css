@@ -136,14 +136,14 @@ body {
 
 
 .himnakaniDzaxMas { 
-    width: 250px;
+    width: 255px;
     border-radius: 15px;
     background: white;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 15px;
     position: relative;
     top: 70px;
-    left: 54px;
+    left: 51px;
 }
 /* pricinggggg */
 .text18 {
@@ -175,7 +175,7 @@ body {
     width: 1160px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: rgba(237, 238, 239, 0.936);
+    background-color: rgb(235, 236, 236);
     gap: 50px;
     position: relative;
     left: 355px;
@@ -185,15 +185,15 @@ body {
 .nkarneriDiver {
     width: 289.9px;
     background: white;
-    display: inline-block;
     border-radius: 20px;
     position: relative;
-    top: 50px;
+    top: -20px;
     left: 3px;
     display: flex;
     flex-direction: column;
     padding: 15px;
     overflow: hidden;
+    margin-left: 25.5px;
 }
 @keyframes animdiv {
     from {
@@ -206,7 +206,7 @@ body {
     }
 }
  .nkarneriDiver {
-  transition: 0.2s ease-in-out;
+  transition: 0.26s ease-in-out;
 }
 
 .nkarneriDiver:hover {
@@ -277,4 +277,24 @@ body {
 .mobileAnim {
       width: 93%;
       height: 452px;
+}
+
+.leftContainer {
+    width: 350px;
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    border-radius: 20px;
+    margin-left: 9px
+}
+.gnijecum20 {
+    background-color: #fffae6;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    border: 2px solid #ffe58f;
+    width: 250px;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    line-height: 30px;
 }
