@@ -134,3 +134,20 @@ search.addEventListener("input", function (e) {
 
   himnakanNkarneriMas(filtered);
 });
+
+let searchClose = document.querySelector(".searchClose");
+let input = document.querySelector("#search");
+
+searchClose.addEventListener("click", function(){
+  if (input.value) {
+    input.value = "";
+  }
+});
+
+
+
+let pictureManLogin = document.querySelector("#pictureMan");
+
+pictureManLogin.addEventListener("click", function () {
+  window.open("./log-in.html", "_blank");
+});
