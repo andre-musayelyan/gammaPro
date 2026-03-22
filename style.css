@@ -375,36 +375,25 @@ body {
         padding: 10px;
         gap: 10px;
     }
-    #pictureLogo {
-        margin: 0;
-    }
-    .text1 {
-        margin: 0;
-    }
     #search {
-        width: 100%;
         left: 0;
-        transform: none;
     }
-    #SearchPicture {
-        display: none;
+    #pictureBasket {
+        position: static;
+        margin: 0;
     }
-    .searchClose,
-    .searchCloseBackg {
-        display: none;
-    }
-    #pictureBasket,
     #pictureMan {
         position: static;
         margin: 0;
     }
     .orangeText {
         flex-direction: column;
-        height: auto;
         gap: 5px;
         text-align: center;
     }
-    #text3,
+    #text3 {
+        margin: 0;
+    }
     #text4 {
         margin: 0;
     }
