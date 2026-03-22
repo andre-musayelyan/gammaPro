@@ -6,8 +6,8 @@
 }
 /* բօդիին գույն տալու համար */
 body {
-    /* background-color: rgba(237, 238, 239, 0.936); */
     background-color: rgb(235, 236, 236);
+    padding-top: 118px;
 }
 /* սարքում ենք ամենավերևի մասի ֆոնը */
 .crotch1 {
@@ -67,8 +67,8 @@ body {
     width: 14px;
     height: 15px;
     position: relative;
-    top: 24px;
-    left: 416px;
+    top: 19px;
+    left: 413px;
 }
 /* վերևի մասի ամենաաջ մասի խանութնա */
 #pictureBasket {
@@ -294,9 +294,6 @@ body {
     top: 63px;
     z-index: 1000;
 }
-body {
-    padding-top: 118px;
-}
 .mobileAnim {
       width: 93%;
       height: 452px;
@@ -331,8 +328,8 @@ body {
     height: 15px;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
-    left: 560px;
+    transform: translateY(-40%);
+    left: 765px;
     cursor: pointer;
     z-index: 2;
 }
@@ -345,8 +342,8 @@ body {
     width: 20px;
     height: 20px;
     position: relative;
-    left: 557.5px;
-    top: 2.5px;
+    left: 762.5px;
+    top: -27.5px;
     z-index: 1;
 }
 .searchCloseBack {
@@ -367,8 +364,73 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 720px){
-    #search {
-    left: 200px;
+.AllSearchPhone {
+    position: relative;
 }
+
+@media (max-width: 720px) {
+    .crotch1 {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    #pictureLogo {
+        margin: 0;
+    }
+    .text1 {
+        margin: 0;
+    }
+    #search {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+    #SearchPicture {
+        display: none;
+    }
+    .searchClose,
+    .searchCloseBackg {
+        display: none;
+    }
+    #pictureBasket,
+    #pictureMan {
+        position: static;
+        margin: 0;
+    }
+    .orangeText {
+        flex-direction: column;
+        height: auto;
+        gap: 5px;
+        text-align: center;
+    }
+    #text3,
+    #text4 {
+        margin: 0;
+    }
+    .leftContainer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .select1 {
+        width: 90%;
+        left: 0;
+        margin: 10px auto;
+    }
+    .himnakaniDzaxMas {
+        width: 90%;
+        left: 0;
+        margin: 10px auto;
+    }
+    .himnakanNkarneriMas {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 10px;
+    }
+    .nkarneriDiver {
+        margin: 0 auto;
+    }
 }
