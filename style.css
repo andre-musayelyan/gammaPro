@@ -26,17 +26,14 @@ body {
 /* վերևի մասի ֆօնի վրի բառերնա դզվում */
 .text1 {
     font-weight: 600;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 14px;
-    position: relative;
-    left: -42px;
-    margin-left: 28px;
-    letter-spacing: 0.2px;
-    margin-top: 7px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
     color: black;
+    display: inline;
     text-decoration: none;
-    display: inline-block;
-    text-shadow: 2px 2px 3.2px rgb(18, 17, 17);
+    /* padding: 20px; */
 }
 /* վերևի մասի ֆոնի փնտրտուքներնա դզվում */
 #search {
@@ -45,7 +42,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     padding-left: 25px;
-    left: 400px;
+    left: 600px;
     border-radius: 6px;
     border-color: black;
     transition: 0.2s;
@@ -71,7 +68,7 @@ body {
     height: 15px;
     position: relative;
     top: 24px;
-    left: 215px;
+    left: 416px;
 }
 /* վերևի մասի ամենաաջ մասի խանութնա */
 #pictureBasket {
@@ -79,7 +76,7 @@ body {
     height: 20px;
     margin-top: 21px;
     position: relative;
-    left: 448px;
+    left: 665px;
     cursor: pointer;
 }
 /* վերևի մասի ամենաաջ մասի մարդնա */
@@ -87,11 +84,14 @@ body {
     width: 20px;
     height: 20px;
     margin-top: 21.5px;
-    margin-left: 470px;
+    margin-left: 690px;
     cursor: pointer;
+    padding: 0px 0px;
 }
 
-
+/* #pictureMan {
+    margin: 0;
+} */
 
 
 /* գազարագույն գույնի ֆոննա դզվում */
@@ -99,10 +99,13 @@ body {
     white-space: nowrap;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     height: 63px;
     background: #ff9500;
     background: linear-gradient(0deg, rgba(255, 149, 0, 1) 0%, rgba(255, 181, 77, 1) 50%, rgba(255, 149, 0, 1) 100%);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /* գազարագույն գույնի ֆոնի գրվածների ընդհանուր գրծնա դզվում */
 .text2 {
@@ -116,14 +119,12 @@ body {
 #text3 {
     font-size: 30px;
     font-weight: 600;
-    margin-left: 36px;
     margin-top: 11.5px;
 }
 /* գազարագույն գույնի ֆոնի երկրորդ գրվածքնա դզվում */
 #text4 {
     font-size: 18.7px;
-    margin-top: 20px;
-    margin-left: 59%;
+    margin-top: 20px;   
 }
 
 
@@ -331,7 +332,7 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    left: 360px;
+    left: 560px;
     cursor: pointer;
     z-index: 2;
 }
@@ -344,10 +345,30 @@ body {
     width: 20px;
     height: 20px;
     position: relative;
-    left: 357.5px;
+    left: 557.5px;
     top: 2.5px;
     z-index: 1;
 }
 .searchCloseBack {
     width: 0;
+}
+
+.text1 a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.text1 a:hover {
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 720px){
+    #search {
+    left: 200px;
+}
 }

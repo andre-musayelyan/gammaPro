@@ -149,5 +149,5 @@ searchClose.addEventListener("click", function(){
 let pictureManLogin = document.querySelector("#pictureMan");
 
 pictureManLogin.addEventListener("click", function () {
-  window.open("./log-in.html", "_blank");
+  
 });
