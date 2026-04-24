@@ -68,7 +68,6 @@ maxInput.addEventListener("input", productsMinMax);
 
 
 
-
 let select3 = document.querySelector("#select3");
 select3.addEventListener("change", (e) => {
   let value = e.target.value;
